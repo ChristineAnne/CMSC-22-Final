@@ -91,12 +91,12 @@ public class StringQueue{
 		if(count >= elements.length){
 			expand();
 		}
-
-		for(int i = count-1; i >= position; i--){
-			
+		
+		for(int i = count; i >= position; i--){ // shifts the items in elements[] to the right
 			elements[i+1] = elements[i];
 		}
 
-		elements[position] = item;
+		elements[position] = item; 
+		count++;
 	}
 }
